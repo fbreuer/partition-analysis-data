@@ -1,0 +1,1 @@
+{"metrics": {"total_time": "0.0936949253082", "sc": "0.025829076767", "ncones": "10", "fundpar": "0.054869890213"}, "instance": "25@0", "command": "sage /scratch/zafeirak/git/benchit/example/tmp/1_25@0.code", "method": "1"}
