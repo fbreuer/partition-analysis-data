@@ -1,0 +1,7 @@
+{
+		"methods":"methods",
+		"instances":["big_basic"],
+		"datasets":"datasets",
+        "timeout":3
+}
+

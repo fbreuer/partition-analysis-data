@@ -1,0 +1,7 @@
+{
+		"methods":"methods",
+		"instances":["lecture_hall","restricted_partition"],
+		"datasets":"datasets",
+        "timeout":3
+}
+
