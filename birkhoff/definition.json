@@ -1,0 +1,7 @@
+{
+		"methods":"methods",
+		"instances":["birkhoff"],
+		"datasets":"datasets",
+        "timeout":3
+}
+
