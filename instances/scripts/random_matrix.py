@@ -1,4 +1,4 @@
-import json
+from util import *
 
 # in proper sage code, we should use sage.misc.randstate instead - but this is not necessary here,
 # since we don't care about reproducibility of the output of this file
@@ -28,29 +28,8 @@ def problem_set(the_n,the_m,a,b,draws):
     instances = [ instance(the_m,the_n,a,b,d) for d in range(draws)]
     return instances
 
-def write_problem_set(instances,filename):
-	print "writing", filename
-	file = open(filename,"w")
-	json.dump(instances,file)
-	file.close()
-
-def plainify(obj):
-	#print type(obj), obj
-	if isinstance(obj,list):
-		return [ plainify(e) for e in obj]
-	elif isinstance(obj,dict):
-		res = {}
-		for key, val in obj.iteritems():
-			res[key] = plainify(val)
-		return res
-	elif isinstance(obj,sage.rings.integer.Integer):
-		return int(obj)
-	elif isinstance(obj,sage.rings.rational.Rational):
-		return {"numerator":obj.numerator(), "denominator":obj.denominator()}
-	else:
-		return obj
-
 def generate(m,n,a,b,draws):
-	instances = problem_set(m,n,a,b,draws)
-	print instances
-	write_problem_set(plainify(instances),"tests/random_%dx%d_matrices_in_%d_%d.json" % (m,n,a,b) )
+	instances = plainify(problem_set(m,n,a,b,draws))
+	filename = "tests/random_%dx%d_matrices_in_%d_%d.json" % (m,n,a,b)
+	print "writing", filename
+	spit_json(instances, filename)
