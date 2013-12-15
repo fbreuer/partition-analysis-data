@@ -2,6 +2,8 @@
 		"methods":"methods",
 		"instances":["lecture_hall","restricted_partition"],
 		"datasets":"datasets",
-        "timeout":3
+        "timeout":3,
+    "output":"output",
+    "name":"testing"
 }
 
