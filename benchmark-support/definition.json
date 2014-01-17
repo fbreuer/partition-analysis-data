@@ -1,0 +1,8 @@
+{
+		"methods":"methods",
+		"instances":["basic"],
+		"datasets":"datasets",
+        "timeout":3,
+"output":"output"
+}
+
