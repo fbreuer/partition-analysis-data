@@ -1,3 +1,6 @@
+import sage
+import json
+
 def spit_json(obj,filename):
     file = open(filename,"w")
     json.dump(obj,file)
