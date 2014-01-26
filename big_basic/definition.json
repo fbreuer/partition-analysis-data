@@ -2,6 +2,8 @@
 		"methods":"methods",
 		"instances":["big_basic"],
 		"datasets":"datasets",
-        "timeout":3
+        "timeout":3,
+    "output":"output",
+    "name":"testing"
 }
 
