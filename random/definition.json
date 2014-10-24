@@ -1,9 +1,0 @@
-{
-		"methods":"methods",
-		"instances":["random_3x3_matrices_in_-5_5","random_3x3_matrices_in_-20_20","random_3x3_matrices_in_-100_100","random_4x4_matrices_in_-1_1","random_5x5_matrices_in_-1_1","random_10x10_matrices_in_-1_1"],
-		"datasets":"datasets",
-        "timeout":3,
-    "output":"output",
-    "name":"testing"
-}
-

@@ -1,1 +1,0 @@
-{"metrics": {"total_time": "4.11776208878", "sc": "0.0298321247101", "ncones": "1", "fundpar": "3.29698204994"}, "instance": "6@lecture_hall", "command": "sage /scratch/zafeirak/git/benchit/../partition-analysis-data/partitions/tmp/1_6@lecture_hall.code", "method": "1"}

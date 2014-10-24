@@ -1,1 +1,0 @@
-{"metrics": {"total_time": "0.0475380420685", "sc": "0.0392210483551", "ncones": "1", "fundpar": "0.00809597969055"}, "instance": "8@restricted_partition", "command": "sage /scratch/zafeirak/git/benchit/../partition-analysis-data/partitions/tmp/1_8@restricted_partition.code", "method": "1"}
