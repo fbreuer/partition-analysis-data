@@ -8,7 +8,7 @@ def spit_json(obj,filename):
     json.dump(obj,file)
     file.close()
 
-def slurp_json(obj,filename):
+def slurp_json(filename):
     file = open(filename,"r")
     result = json.load(file)
     file.close()
@@ -46,3 +46,18 @@ def write_out(directory,instances):
         basename = str(instance["id"])
         filename = os.path.join(directory,basename+".json")
         spit_json(instance,filename)
+
+def explode_instance_file(filename):
+    path = os.path.abspath(filename)
+    base_dir = os.path.dirname(path)
+    basename = os.path.basename(path)[:-5]
+    new_dir = os.path.join(base_dir,basename)
+    if filename[-5:]==".json":
+        print "exploding", path
+        jsondata = slurp_json(path)
+        print basename
+        if not os.path.exists(new_dir): 
+            print "creating", new_dir
+            os.mkdir(new_dir)
+        for entry in jsondata:
+            spit_json(entry,os.path.join(new_dir,str(entry["id"])+".json"))
