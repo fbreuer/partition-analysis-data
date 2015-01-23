@@ -24,7 +24,7 @@ def instance(m,n,a,b,id=None):
     	instance["id"] = id
     return instance
 
-def problem_set(the_n,the_m,a,b,draws):
+def problem_set(the_m,the_n,a,b,draws):
     instances = [ instance(the_m,the_n,a,b,d) for d in range(draws)]
     return instances
 

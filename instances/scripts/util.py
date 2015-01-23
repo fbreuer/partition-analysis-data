@@ -1,5 +1,7 @@
 import sage
 import json
+import os
+import os.path
 
 def spit_json(obj,filename):
     file = open(filename,"w")
@@ -35,3 +37,12 @@ def plainify(obj):
         if not (isinstance(obj,int) or isinstance(obj,float) or isinstance(obj,str)):
             print type(obj)
         return obj
+
+def write_out(directory,instances):
+    """Takes a directory (given as a string) and an array of instances and writes them out into separate JSON files in the given directory. Each instance is required to have an 'id' attribute."""
+    plain_instances = plainify(instances)
+    os.mkdir(directory)
+    for instance in plain_instances:
+        basename = str(instance["id"])
+        filename = os.path.join(directory,basename+".json")
+        spit_json(instance,filename)
